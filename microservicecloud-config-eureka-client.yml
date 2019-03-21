@@ -1,6 +1,7 @@
 ﻿spring:
-   profiles:
-     active: dev
+  profiles:
+     active:
+     -  dev
 ---
 server:
   port: 7001
