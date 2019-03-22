@@ -9,15 +9,15 @@ spring:
   application:
     name: microservicecloud-config-dept-client
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource           #当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver            #mysql驱动包
-    url: jdbc:mysql://127.0.0.1:3306/clouddb01           #数据库名称
+    type: com.alibaba.druid.pool.DruidDataSource          
+    driver-class-name: org.gjt.mm.mysql.Driver            
+    url: jdbc:mysql://127.0.0.1:3306/clouddb01          
     username: root
     password: 123456
-    dbcp2:
-      min-idle: 5                                         #数据库连接池的最小维持连接数
-      initial-size: 5                                     #初始化连接数
-      max-total: 5                                         #最大连接数
+    dbcp2
+      min-idle: 5                                         
+      initial-size: 5                                  
+      max-total: 5                                       
       max-wait-millis: 200       
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        
@@ -32,29 +32,30 @@ eureka:
           defaultZone: http://eureka7001.com:7001/eureka/
 ---
 server:
-    port: 8001
+  port: 8001
 spring:
-    profiles: test
-    application:
-        name: microservicecloud-config-dept-client
-    datasource:
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: org.gjt.mm.mysql.Driver
-        url: jdbc:mysql://localhost:3306/cloudDB02
-        username: root
-        password: 123456
-        dbcp2:
-            min-idle: 5
-            initial-size: 5
-            max-total: 5
-            max-wait-millis: 200
-mybaits:
-    config-location: classpath:mybaits/mybaits.cfg.xml
-    type-aliases-package: com.atguigu.springcloud.entities
-    mapper-locations:
-    - classpath: mybaits/mapper/**/*.xml
+  profiles: test
+  application:
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource          
+    driver-class-name: org.gjt.mm.mysql.Driver            
+    url: jdbc:mysql://127.0.0.1:3306/clouddb02        
+    username: root
+    password: 123456
+    dbcp2
+      min-idle: 5                                         
+      initial-size: 5                                  
+      max-total: 5                                       
+      max-wait-millis: 200       
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        
+  type-aliases-package: com.atguigu.springcloud.entities   
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml                      
+
     
 eureka:
-    client:
-        serice-url:
-            defaultZone: http://eureka7001.com:7001/eureka/
+  client:
+      serice-url:
+          defaultZone: http://eureka7001.com:7001/eureka/
