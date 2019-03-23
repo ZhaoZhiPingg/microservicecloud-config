@@ -13,8 +13,8 @@ server:
 #   - classpath:mybatis/mapper/**/*.xml                      #mapper映射文件
 
 spring:
-  application:
-    profiles: dev
+  profiles: dev
+  application: 
     name: microservicecloud-config-dept-client
 #   datasource:
 #     type: com.alibaba.druid.pool.DruidDataSource           #当前数据源操作类型
